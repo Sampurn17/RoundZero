@@ -208,7 +208,8 @@ CRITICAL: You MUST return ONLY a valid JSON object. Do not include markdown code
 
 async function generatePdfFromHtml(htmlContent) {
     const browser = await puppeteer.launch({
-        headless: "new"
+        headless: "new",
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
     });
 
     try {
