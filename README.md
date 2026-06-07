@@ -108,6 +108,6 @@ RoundZero/
 Contributions, issues, and feature requests are welcome!
 Feel free to check the [issues page](https://github.com/your-username/RoundZero/issues).
 
-## 📝 License
+## 👤 Author
 
-This project is licensed under the ISC License.
+**Sampurn Samadder**
