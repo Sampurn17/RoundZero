@@ -214,7 +214,7 @@ async function generatePdfFromHtml(htmlContent) {
 
     try {
         const page = await browser.newPage();
-        await page.setContent(htmlContent, { waitUntil: "networkidle0" })
+        await page.setContent(htmlContent, { waitUntil: "networkidle2", timeout: 60000 })
 
         const pdfBuffer = await page.pdf({
             format: "A4", margin: {
