@@ -1,0 +1,169 @@
+@use "sass:color";
+
+$bg-card: #23232c;
+$bg-panel: #1c1c24;
+$border-color: #353443;
+$text-primary: #f0f0f5;
+$text-muted: #9e9da4;
+$accent: #ff6b9d;
+$bento-radius: 16px;
+
+.recent-reports-sidebar {
+    width: 260px;
+    min-width: 260px;
+    max-width: 260px;
+    flex-shrink: 0;
+    // CRITICAL: min-height:0 lets this flex child shrink to the row height
+    min-height: 0;
+    background-color: rgba(30, 30, 38, 0.7);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(225, 29, 72, 0.2);
+    border-radius: $bento-radius;
+    padding: 1.25rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    box-sizing: border-box;
+
+    h2 {
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: $text-primary;
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+    .sidebar-home-btn {
+        width: 100%;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        background: transparent;
+        border: 1px solid $border-color;
+        color: $text-primary;
+        padding: 0.5rem 1rem;
+        border-radius: 0.4rem;
+        cursor: pointer;
+        font-size: 0.85rem;
+        transition: background-color 0.2s, border-color 0.2s;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+    }
+
+    .reports-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        flex: 1;
+        min-height: 0; // allow the list to scroll within the sidebar
+        overflow-y: auto;
+
+        .report-item {
+            position: relative;
+            background-color: $bg-panel;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: 0.5rem;
+            padding: 0.85rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+            cursor: pointer;
+            transition: border-color 0.2s, background-color 0.2s;
+            flex-shrink: 0; // items don't compress — list scrolls instead
+
+            &:hover {
+                border-color: $accent;
+                background-color: rgba($accent, 0.05);
+            }
+
+            &--active {
+                border-color: $accent;
+                background-color: rgba($accent, 0.08);
+            }
+
+            h3 {
+                font-size: 0.88rem;
+                font-weight: 500;
+                color: $text-primary;
+                margin: 0;
+                line-height: 1.3;
+                padding-right: 1.5rem;
+            }
+
+            .report-meta {
+                font-size: 0.72rem;
+                color: $text-muted;
+                margin: 0;
+            }
+
+            .match-score {
+                font-size: 0.78rem;
+                font-weight: 600;
+                margin: 0;
+
+                &.score--high {
+                    color: #34d399;
+                }
+
+                &.score--mid {
+                    color: #fbbf24;
+                }
+
+                &.score--low {
+                    color: #f87171;
+                }
+            }
+
+            .report-delete-btn {
+                position: absolute;
+                top: 0.85rem;
+                right: 0.85rem;
+                background: transparent;
+                border: none;
+                color: #f87171;
+                cursor: pointer;
+                padding: 0.15rem;
+                opacity: 0.5;
+                transition: opacity 0.2s;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .sidebar-logout-btn {
+        width: 100%;
+        flex-shrink: 0;
+        margin-top: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        background: transparent;
+        border: 1px solid rgba(248, 113, 113, 0.3);
+        color: #f87171;
+        padding: 0.5rem 1rem;
+        border-radius: 0.4rem;
+        cursor: pointer;
+        font-size: 0.85rem;
+        transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+
+        &:hover {
+            background-color: rgba(248, 113, 113, 0.1);
+            border-color: #f87171;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+// ── Global root fix ───────────────────────────────────────────────────────────
+// index.css sets #root to min-height:100svh + display:flex which makes
+// the page grow with content. The interview page needs a fixed height
+// chain. Override here so interview-page 100vh is actually respected.
+
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+
+#root {
+    height: 100%;           // fixed height, not min-height
+    min-height: unset;      // kill the min-height:100svh from index.css
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 1126px;
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}

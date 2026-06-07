@@ -1,0 +1,86 @@
+@use "sass:color";
+
+$bg-nav: rgba(22, 23, 29, 0.6);
+$border-nav: rgba(255, 255, 255, 0.05);
+$text-primary: #f0f0f5;
+$text-muted: #9e9da4;
+$accent: #e11d48;
+$font-stack: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+.top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    padding: 0 2rem;
+    background-color: $bg-nav;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid $border-nav;
+    font-family: $font-stack;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    flex-shrink: 0;
+
+    &__left {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        font-size: 1.4rem;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        color: $accent;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    &__link {
+        background: transparent;
+        border: none;
+        color: $text-primary;
+        font-size: 0.95rem;
+        font-weight: 500;
+        cursor: pointer;
+        padding: 0.5rem;
+        transition: color 0.2s;
+        text-decoration: none;
+
+        &:hover {
+            color: $accent;
+        }
+
+        &--logout {
+            color: $text-muted;
+
+            &:hover {
+                color: $accent;
+            }
+        }
+    }
+
+    &__user {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba($accent, 0.15);
+        color: $accent;
+        border: 1px solid rgba($accent, 0.3);
+        padding: 0.4rem 1rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+    }
+}
