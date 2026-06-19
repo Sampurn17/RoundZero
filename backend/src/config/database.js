@@ -5,11 +5,11 @@ const connectToDB = async () => {
     const dbUri = process.env.MONGODB_URI || process.env.MONGO_URI;
     
     if (!dbUri) {
-        console.error("❌ CRITICAL: MONGODB_URI is completely missing from environment variables!");
+        console.error("CRITICAL: MONGODB_URI is completely missing from environment variables!");
     }
     
     await mongoose.connect(dbUri);
-    console.log("🚀 Database connected successfully!");
+    console.log("Database connected successfully!");
 };
 
 module.exports = connectToDB;

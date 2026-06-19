@@ -11,7 +11,7 @@ $text-muted: #9e9da4;
 $accent: #ff6b9d;
 $accent-alt: #ff8fb5;
 $font-stack: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-$bento-radius: 16px;
+$bento-radius: 10px;
 $bento-gap: 0.75rem;
 $bento-padding: 1.25rem;
 
@@ -62,12 +62,11 @@ $bento-padding: 1.25rem;
 
 // ── Bento Card ───────────────────────────────────────────────────────────────
 .bento-card {
-    background-color: rgba(30, 30, 38, 0.7);
-    backdrop-filter: blur(16px);
-    border: 1px solid rgba(225, 29, 72, 0.2);
+    background-color: #1a1a22;
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: $bento-radius;
     padding: $bento-padding;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.4);
 }
 
 // ── Middle column ─────────────────────────────────────────────────────────────
@@ -96,7 +95,7 @@ $bento-padding: 1.25rem;
     flex-shrink: 0;
     background-color: transparent;
     border-radius: $bento-radius;
-    border: 1px solid rgba(225, 29, 72, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -115,7 +114,7 @@ $bento-padding: 1.25rem;
         border: none;
         color: #fff;
         padding: 0.5rem 1.25rem;
-        border-radius: 0.5rem;
+        border-radius: 6px;
         font-size: 0.85rem;
         font-weight: 600;
         cursor: pointer;
@@ -157,8 +156,7 @@ $bento-padding: 1.25rem;
     &__label {
         font-size: 0.8rem;
         font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.06em;
+        letter-spacing: 0.02em;
         color: $text-primary;
         padding: 0 0.75rem;
         margin-bottom: 0.75rem;
@@ -173,7 +171,7 @@ $bento-padding: 1.25rem;
         padding: 0.65rem 0.75rem;
         background: none;
         border: none;
-        border-radius: 0.5rem;
+        border-radius: 6px;
         color: $text-muted;
         font-family: $font-stack;
         font-size: 0.85rem;
@@ -241,9 +239,8 @@ section {
 
     h2 {
         font-size: 1.1rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.03em;
+        font-weight: 700;
+        letter-spacing: 0.02em;
     }
 
     &__count {
@@ -264,7 +261,7 @@ section {
 
 .q-card {
     background-color: $bg-panel;
-    border: 1px solid rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 0.6rem;
     overflow: hidden;
     transition: background-color 0.2s;
@@ -293,7 +290,7 @@ section {
         justify-content: center;
         width: 30px;
         height: 30px;
-        border-radius: 0.4rem;
+        border-radius: 6px;
         background-color: rgba($accent, 0.12);
         color: $accent;
         font-size: 0.75rem;
@@ -337,7 +334,7 @@ section {
 
     &__section {
         padding: 0.85rem 1rem;
-        border-radius: 0.45rem;
+        border-radius: 10px;
         background-color: rgba(0, 0, 0, 0.15);
         border-left: 3px solid $text-muted;
 
@@ -359,9 +356,8 @@ section {
         align-items: center;
         gap: 0.4rem;
         font-size: 0.7rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.04em;
+        font-weight: 700;
+        letter-spacing: 0.02em;
         color: $text-muted;
         margin-bottom: 0.5rem;
 
@@ -428,8 +424,8 @@ section {
         flex: 1;
         min-width: 0;
         background-color: $bg-panel;
-        border: 1px solid rgba(255, 255, 255, 0.04);
-        border-radius: 0.6rem;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 10px;
         padding: 1rem 1.25rem;
         transition: background-color 0.2s;
 
@@ -504,8 +500,7 @@ section {
     &__label {
         font-size: 0.8rem;
         font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.06em;
+        letter-spacing: 0.02em;
         color: $text-primary;
         width: 100%;
         margin: 0;
@@ -619,8 +614,7 @@ section {
     &__label {
         font-size: 0.8rem;
         font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.06em;
+        letter-spacing: 0.02em;
         color: $text-primary;
         margin: 0;
     }
@@ -725,8 +719,7 @@ section {
 .loading-overlay {
     position: fixed;
     inset: 0;
-    background: rgba($bg-page, 0.88);
-    backdrop-filter: blur(10px);
+    background: rgba($bg-page, 0.95);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -752,7 +745,7 @@ section {
     border: 4px solid rgba($accent, 0.2);
     border-top-color: $accent;
     animation: spin 1s ease-in-out infinite;
-    box-shadow: 0 0 30px rgba($accent, 0.3);
+    box-shadow: 0 0 16px rgba($accent, 0.4);
 }
 
 @keyframes spin {

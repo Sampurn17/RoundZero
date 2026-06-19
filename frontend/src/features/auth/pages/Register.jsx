@@ -51,7 +51,7 @@ const Register = () => {
             <AuthInfoPanel />
 
             <div className="form-container">
-                <h1>ACCOUNT REGISTER</h1>
+                <h1>Account register</h1>
                 
                 {error && <div style={{ color: '#ff4d4d', marginBottom: '1rem' }}>{error}</div>}
 

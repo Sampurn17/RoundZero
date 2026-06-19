@@ -7,8 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(15, 15, 20, 0.85);
-    backdrop-filter: blur(8px);
+    background-color: rgba(15, 15, 20, 0.95);
     z-index: 9999;
 }
 
@@ -22,9 +21,8 @@
 .loader-text {
     color: #e11d48;
     font-size: 1.2rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.02em;
     animation: pulse 1.5s infinite ease-in-out;
 }
 

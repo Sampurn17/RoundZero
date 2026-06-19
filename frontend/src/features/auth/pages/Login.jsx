@@ -43,7 +43,7 @@ const Login = () => {
                 <AuthInfoPanel />
 
                 <div className="form-container">
-                    <h1>ACCOUNT LOGIN</h1>
+                    <h1>Account login</h1>
                     {error && <div style={{ color: '#ff4d4d', marginBottom: '1rem' }}>{error}</div>}
                     <form onSubmit={handleSubmit}>
                         <div className="input-group">
