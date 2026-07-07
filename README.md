@@ -1,7 +1,5 @@
 # 🎯 RoundZero (MERN Stack + GenAI)
 
-![RoundZero Banner](https://via.placeholder.com/1200x400/1e1e2f/ffffff?text=RoundZero+-+MERN+%2B+GenAI+Platform)
-
 **RoundZero** is a robust, full-stack **MERN** (MongoDB, Express.js, React, Node.js) application designed to serve as an intelligent interview platform. While its core architecture is built heavily on MERN stack best practices for scalability and performance, it integrates advanced Generative AI capabilities to conduct first-round ("Round Zero") interviews automatically.
 
 ## ✨ Core MERN Features
